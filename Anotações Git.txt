@@ -1,13 +1,15 @@
-﻿ 	
+https://wethefoss.github.io/Git-Commands/
 
 
 git config --global user.name "nome" 								Configura o git
 
 git config --global user.email email								Configura o git
 
+git config --global core.editor editor 								Define o editor de texto padrão
 
 
-git init	inicia um repositório
+
+git init											inicia um repositório
 
 git remote add origin https://github.com/NomeUsúario/NomeRepositório.git
 
@@ -15,11 +17,11 @@ git clone https://github.com/NomeUsúario/NomeRepositório.git					Clona o repos
 
 	  -b meu-branch http://usuario:senha@minha-url-repo.git 				clona o repositório privado
 
-git add Arquivo.extenção									Adiciona o aruquivo a pasta do repositório
+git add Arquivo.extenção									Adiciona o aruquivo a pasta do 														repositório
 
 git add *
 
-git status	Vrifica como está o git
+git status											Vrifica como está o git
 
 git commit -am "Alteração: detelahes alteração"							add e commita
 
@@ -50,31 +52,20 @@ git pull origin master 										Dar pull(receber)
 
 nano .gitignore 										abre arquivos ignorados
 
----------------------------------------------------------- Parte do Zoen
----------------------------------------------------------Git: ------------------------------------------------------------
-CONFIGURAÇÕES DO GIT:
-git config --globa user.name u19168 // Define o nome do usuário do git
 
-git config --global user.email "enzo.spinella@gmail.com" // Define o E-Mail do usuário do git
+BRENCHS:
+git checkout -b (nome do novo brench) 								Cria um novo branch
 
-git config --global core.editor sub // Define o editor de texto padrão para o Git (Nesse caso, Sublime)
+git branch											Da a lista dos brenchs
 
-INICIALIZAÇÃO DE UM REPOSITORIO
-cd exemplo // Ir até a pasta escolhida e entrar nela
+git checkout (nome do brench) 									Muda para esse branch
 
-git init // Inicializa o repositório e serve parar a identificação de alterações
+git branch -D (nome do branch) 									Exclue o branch
 
-FAZENDO ALTERAÇÕES
-git status // Exibe quantos commits já foram feitos e mostra quais arquivos foram alterados
+git merge "nome da branch que quer juntar" 							Junta as duas branchs atraves de um novo 												 commit (guarda o histórico)
 
-git add // O git reconhece o arquivo e deixa ele pronto para ser commitado
+git rebase "nome da branch que quer juntar"							Junta as duas branchs colocando os 													commits da outra branch (sem ser a do 													master) no fim do histórico.
 
-git commit -m "MENSAGEMMMM" // Tudo que o git tem reconhecido de que foi adicionado ou modificado, é commitado. Depois disso, não da pra dar outro git add sem uma alteração nos arquivos e etc.
-
-VENDO LOGS
-git log // Mostra todos os commits já feitos, por quem, que horas, etc.
-
-git diff // Muito importante para se dar antes do commit
 
 CANCELANDO ALTERAÇÕES
 
@@ -90,16 +81,7 @@ CONECTANDO OS DOIS:
 git remote add origin git@github.com:(nome da conta em que está o repositorio)willianjusten/(nome do repositório) //Conecta o repositório do git com o do git hub.
 git push -u origin master (master==brench padrão) // Coloca todos os novos commits no repositório do github
 
-PEGANDO UM REPOSITÓRIO DO GITHUB
-git clone (SSH na parte do repositório) git@github.com:willianjusten/git-hub-course
 
-BRENCHS:
-git checkout -b (nome do novo brench) // Cria um novo branch
-git branch// Da a lista dos brenchs
-git checkout (nome do brench) // Muda para esse branch
-git branch -D (nome do branch) // Exclue o branch
 
-git merge "nome da branch que quer juntar" // Junta as duas branchs atraves de um novo commit (guarda o histórico)
-git rebase "nome da branch que quer juntar" // junta as duas branchs colocando os commits da outra branch (sem ser a do master) no fim do histórico.
 
 
